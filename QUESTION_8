@@ -1,0 +1,27 @@
+CREATE DATABASE Q8_DB;
+USE Q8_DB;
+
+CREATE TABLE Users (
+    user_id INT,
+    username VARCHAR(50),
+    salary DECIMAL(8,2)
+);
+
+INSERT INTO Users VALUES
+(1,'Abi',35000),
+(2,'Gowtham',40000),
+(3,'Harish',30000),
+(4,'Abi',45000);   -- Duplicate username
+
+SELECT * FROM Users;
+
+-- Update one specific user
+UPDATE Users
+SET salary = 75000
+WHERE user_id = 2;
+
+-- Delete only one duplicate record
+DELETE FROM Users
+WHERE user_id = 4 AND username='Abi';
+
+SELECT * FROM Users;
