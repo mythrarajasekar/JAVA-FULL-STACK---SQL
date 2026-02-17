@@ -1,0 +1,22 @@
+CREATE DATABASE Q9_DB;
+USE Q9_DB;
+
+CREATE TABLE Users_Test (
+    user_id INT,
+    username VARCHAR(50),
+    salary DECIMAL(8,2)
+);
+
+INSERT INTO Users_Test VALUES
+(1,'Abi',35000),
+(2,'Gowtham',40000),
+(3,'Harish',30000);
+
+SELECT * FROM Users_Test;
+
+-- No row matches this condition
+DELETE FROM Users_Test
+WHERE user_id = 10 AND salary = 90000;
+
+-- SQL executes successfully (0 rows affected)
+SELECT * FROM Users_Test;
