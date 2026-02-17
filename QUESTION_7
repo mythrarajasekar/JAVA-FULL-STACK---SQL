@@ -1,0 +1,30 @@
+CREATE DATABASE Q7_DB;
+USE Q7_DB;
+
+CREATE TABLE Payroll (
+    emp_id INT,
+    emp_name VARCHAR(50),
+    basic_salary DECIMAL(10,2),
+    bonus DECIMAL(10,2)
+);
+
+INSERT INTO Payroll VALUES
+(1,'Abi',30000,5000),
+(2,'Gowtham',40000,10000),
+(3,'Harish',30000,10000);
+
+SELECT * FROM Payroll;
+
+-- Update bonus of one employee
+UPDATE Payroll
+SET bonus = bonus + 200
+WHERE emp_id = 1;
+
+-- Delete one employee
+DELETE FROM Payroll
+WHERE emp_id = 2;
+
+-- Rename table
+RENAME TABLE Payroll TO Employee_Payroll;
+
+SELECT * FROM Employee_Payroll;
