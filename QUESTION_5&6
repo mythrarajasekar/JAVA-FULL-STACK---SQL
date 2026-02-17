@@ -1,0 +1,43 @@
+CREATE DATABASE WIPRO;
+USE WIPRO;
+
+CREATE TABLE Students (
+    roll_no INT,
+    name VARCHAR(50),
+    marks INT
+);
+
+INSERT INTO Students VALUES
+(1, 'Amit', 78),
+(2, 'Neha', 85),
+(3, 'Amit', 67),
+(4, 'Rahul', 90),
+(5, 'Sneha', 72);
+
+SELECT * FROM Students;
+
+UPDATE Students
+SET marks = 80
+WHERE name = 'Amit'
+AND roll_no = 1;
+
+ALTER TABLE Students
+DROP COLUMN marks;
+START TRANSACTION;
+
+
+ROLLBACK;
+
+
+OUTPUT
+	roll_no	name
+	1	Amit
+	2	Neha
+	3	Amit
+	4	Rahul
+	5	Sneha
+	1	Amit
+	2	Neha
+	3	Amit
+	4	Rahul
+	5	Sneha
