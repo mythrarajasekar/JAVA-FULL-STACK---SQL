@@ -1,0 +1,36 @@
+CREATE DATABASE INFOSYS;
+USE INFOSYS;
+
+CREATE TABLE EMPLOYEE2 (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary DECIMAL(10,2),
+    department VARCHAR(30)
+);
+
+INSERT INTO EMPLOYEE2 VALUES
+(1, 'Ravi', 50000, 'IT'),
+(2, 'Ravi', 65000, 'HR'),
+(3, 'Anu', 45000, 'Finance'),
+(4, 'Kiran', 55000, 'IT');
+
+SELECT * FROM EMPLOYEE2;
+SET SQL_SAFE_UPDATES = 0;
+
+
+UPDATE EMPLOYEE2
+SET salary = salary + 5000
+WHERE name = 'Ravi'
+AND salary = 50000
+AND department = 'IT';
+
+UPDATE Employee2 SET salary = 75000;
+
+SELECT * FROM EMPLOYEE2;
+
+OUTPUT
+1	Ravi	75000.00	IT
+2	Ravi	75000.00	HR
+3	Anu	75000.00	Finance
+4	Kiran	75000.00	IT
+			
