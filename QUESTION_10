@@ -1,0 +1,23 @@
+CREATE DATABASE Q10_DB;
+USE Q10_DB;
+
+CREATE TABLE Transactions (
+    txn_id INT,
+    account_no VARCHAR(20),
+    amount DECIMAL(10,2),
+    transfer_amt INT
+);
+
+INSERT INTO Transactions VALUES
+(1,'ACC101',35000,100),
+(2,'ACC102',40000,200),
+(3,'ACC103',30000,300),
+(4,'ACC104',25000,400);
+
+SELECT * FROM Transactions;
+
+-- Update all rows (no WHERE condition)
+UPDATE Transactions
+SET amount = amount + 10;
+
+SELECT * FROM Transactions;
