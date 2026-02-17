@@ -1,0 +1,38 @@
+CREATE DATABASE TCS;
+USE TCS;
+CREATE TABLE ORDERS (
+    order_id INT,
+    customer_name VARCHAR(50),
+    amount DECIMAL(8,2)
+);
+
+INSERT INTO Orders VALUES
+(101, 'Arun', 2500.00),
+(102, 'Divya', 1800.00),
+(103, 'Arun', 3200.00),
+(104, 'Karthik', 1500.00),
+(105, 'Meena', 2100.00);
+
+SELECT * FROM ORDERS;
+
+DELETE FROM ORDERS
+WHERE customer_name = 'Arun'
+AND amount = 2500.00
+AND order_id = 101;
+
+OUTPUT
+| order_id | customer_name | amount  |
+| -------- | ------------- | ------- |
+| 101      | Arun          | 2500.00 |
+| 102      | Divya         | 1800.00 |
+| 103      | Arun          | 3200.00 |
+| 104      | Karthik       | 1500.00 |
+| 105      | Meena         | 2100.00 |
+
+
+| order_id | customer_name | amount  |
+| -------- | ------------- | ------- |
+| 102      | Divya         | 1800.00 |
+| 103      | Arun          | 3200.00 |
+| 104      | Karthik       | 1500.00 |
+| 105      | Meena         | 2100.00 |
