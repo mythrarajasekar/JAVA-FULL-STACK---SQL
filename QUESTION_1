@@ -25,3 +25,10 @@ AND salary = 50000
 AND department = 'IT';
 
 SELECT * FROM EMPLOYEE1;
+
+OUTPUT
+1	Ravi	55000.00	IT
+2	Ravi	65000.00	HR
+3	Anu	45000.00	Finance
+4	Kiran	55000.00	IT
+			
